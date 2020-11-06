@@ -26,9 +26,9 @@
     /*
     3つ処理させようとしたときに
     The filename, directory name, or volume label syntax is incorrect.
-'r' is not recognized as an internal or external command,
-operable program or batch file.
-The filename, directory name, or volume label syntax is incorrect.
-と出る。わからん。
+    'r' is not recognized as an internal or external command,
+    operable program or batch file.
+    The filename, directory name, or volume label syntax is incorrect.
+    と出る。わからん。
     */
 ?>
