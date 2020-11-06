@@ -4,8 +4,9 @@ EDCBの録画終了後バッチからAmatsukazeServerへ渡すためのもので
 作成中です
 
 ## ファイル一覧
-* enclist.txt(初回起動時に自動生成)
+* enclist.txt(初回起動時バッチで作ります)
 * encode_main(EDCBの録画終了後バッチに入れる)
+* filename.txt(初回起動時バッチで作ります)
 
 # 使い方
 ## 導入時
