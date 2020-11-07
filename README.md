@@ -9,7 +9,8 @@ EDCBの録画終了後バッチからAmatsukazeServerへ渡すためのもので
 * encode_main(EDCBの録画終了後バッチに入れる)
 * filename.txt(初回起動時バッチで作ります)
 * scheduled_execution.bat(導入時に編集してください。)
-* ASsend.php (本体。導入時にいじる箇所あります。)
+* fileadd.php (本体その1)
+* ASsend.php (本体本体その2。導入時にいじる箇所あります。)
 
 # 使い方
 ## 導入時
