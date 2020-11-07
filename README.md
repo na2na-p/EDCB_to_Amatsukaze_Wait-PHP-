@@ -8,6 +8,7 @@ EDCBの録画終了後バッチからAmatsukazeServerへ渡すためのもので
 * enclist.txt(初回起動時バッチで作ります)
 * encode_main(EDCBの録画終了後バッチに入れる)
 * filename.txt(初回起動時バッチで作ります)
+* scheduled_execution.bat(導入時に編集してください。)
 
 # 使い方
 ## 導入時
