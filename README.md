@@ -11,6 +11,9 @@ EDCBの録画終了後バッチからAmatsukazeServerへ渡すためのもので
 * scheduled_execution.bat(導入時に編集してください。)
 * fileadd.php (本体その1)
 * ASsend.php (本体本体その2。導入時にいじる箇所あります。)
+* pending_num.txt (何もないときは0の一文字)
+* sender.bat (scheduled_execution.batがうまくいっていれば自動生成します。)
+* 初回起動時.bat (導入時にのみ使います。)
 
 # 使い方
 ## 導入時
