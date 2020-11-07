@@ -4,31 +4,33 @@
     $encbat_amatsukaze = "encode_Anime_amatsukaze.bat";
     $replace = '$FilePath$';
     $sender = "sender.bat";
-    $sjis = "SJIS";
     $num_file = fopen($pending_number,"r+");
+    flock($num_file, LOCK_EX);
     $num = fgets($num_file);
     $enc_settings = fopen($encbat_amatsukaze,"r");
     $settings = fgets($enc_settings);
-    $lsfiles = fopen($pending_list,"r");
+    $lsfiles = fopen($pending_list,"r+");
+    flock($lsfiles,LOCK_EX);
     for ($i=0; $i < $num; $i++) {
         sleep(1);
         $filename = fgets($lsfiles);
-        $filename = str_replace("\r\n", '', $filename);
+        $filename = str_replace(array("\r\n","\r","\n"), '', $filename);
+        $filename = mb_convert_encoding($filename,"SJIS","utf-8");
         $Tsettings = str_replace($replace,$filename,$settings);
+        $Tsettings = mb_convert_encoding($Tsettings,"utf-8","SJIS");
         $sender_str = fopen($sender,"w");
-        //$Tsettings = mb_convert_encoding($Tsettings,$sjis); //現状動作不可
-        fputs($sender_str,"chcp 65001\n".$Tsettings);
+        fputs($sender_str,$Tsettings);
         fclose($sender_str);
+        //exec ($Tsettings,$opt);
+        //print_r($opt);
         exec ($sender);
     }
+    ftruncate($lsfiles,0);
+    flock($lsfiles,LOCK_UN);
     fclose($lsfiles);
+    fseek($num_file,0);
+    fputs ($num_file,"0");
+    flock($num_file,LOCK_UN);
+    fclose($num_file);
     echo "\nok";
-    /*
-    3つ処理させようとしたときに
-    The filename, directory name, or volume label syntax is incorrect.
-    'r' is not recognized as an internal or external command,
-    operable program or batch file.
-    The filename, directory name, or volume label syntax is incorrect.
-    と出る。わからん。
-    */
 ?>
