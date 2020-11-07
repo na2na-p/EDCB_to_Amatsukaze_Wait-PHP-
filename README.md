@@ -17,3 +17,4 @@ EDCBの録画終了後バッチからAmatsukazeServerへ渡すためのもので
 
 # 使い方
 ## 導入時
+PHP.iniの編集が必要です。
