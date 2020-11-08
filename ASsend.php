@@ -1,7 +1,7 @@
 <?php
     $pending_list = "enclist.txt";
     $pending_number = "pending_num.txt";
-    $encbat_amatsukaze = "encode_Anime_amatsukaze.bat";
+    $encbat_amatsukaze = "Amatsukazeで作ったバッチファイルの名前";
     $replace = '$FilePath$';
     $sender = "sender.bat";
     $num_file = fopen($pending_number,"r+");
@@ -15,9 +15,9 @@
         sleep(1);
         $filename = fgets($lsfiles);
         $filename = str_replace(array("\r\n","\r","\n"), '', $filename);
-        $filename = mb_convert_encoding($filename,"SJIS","utf-8");
+        $filename = mb_convert_encoding($filename,"SJIS-win","utf-8");
         $Tsettings = str_replace($replace,$filename,$settings);
-        $Tsettings = mb_convert_encoding($Tsettings,"utf-8","SJIS");
+        $Tsettings = mb_convert_encoding($Tsettings,"utf-8","SJIS-win");
         $sender_str = fopen($sender,"w");
         fputs($sender_str,$Tsettings);
         fclose($sender_str);
