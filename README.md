@@ -17,6 +17,7 @@ EDCBの録画終了後バッチからAmatsukazeServerへ渡すためのもので
 
 # 使い方
 ## 導入時
+### PHP実行環境の準備
 PHPの実行環境が必要です。用意がなければ以下のURLからダウンロードしてください。  
 https://windows.php.net/download/  
 PATHを通していただくと、バッチファイルのようなphp\php.exeと書かずともphpと書くだけで利用できるようになります。  
