@@ -37,3 +37,6 @@ mbstring.detect_order = UTF-8,SJIS-win,EUC-JP,JIS,ASCII //1660行目付近
 mbstring.substitute_character = none //1665行目付近  
 mbstring.func_overload = 0 //1676行目付近  
 mbstring.strict_detection = Off //1680行目付近  
+　　
+### 本体の用意
+
