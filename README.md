@@ -58,3 +58,9 @@ ASsend.phpを編集します。4行目にAmatsukazeServerで作ったバッチ�
 
 ### 注意点
 今の私にはエンコードプリセットは一つしか設定できません.........
+
+
+
+##### 参考にさせていただいた記事
+https://www.javadrive.jp/php/install/index8.html  
+https://qiita.com/ryo4004/items/70a22c3ca5b2bfc4df1c  
