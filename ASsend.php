@@ -22,7 +22,6 @@
         fputs($sender_str,$Tsettings);
         fclose($sender_str);
         system ($sender);　//execだとなぜか動かなかった。
-        print_r($opt);
     }
     ftruncate($lsfiles,0);
     flock($lsfiles,LOCK_UN);
