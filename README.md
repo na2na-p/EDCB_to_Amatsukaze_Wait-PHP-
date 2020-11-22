@@ -21,12 +21,13 @@ EDCBの録画終了後バッチからAmatsukazeServerへ渡すためのもので
 ### PHP実行環境の準備
 PHPの実行環境が必要です。用意がなければ以下のURLからダウンロードしてください。  
 https://windows.php.net/download/  
-PATHを通していただくと、バッチファイルのようなphp\php.exeと書かずともphpと書くだけで利用できるようになります。  
-やらない場合は、C直下に一つ(mbstring周りのため)と本ツールを置いてあるディレクトリに1つ配置してください。  
+PATHを通していただくと、バッチファイルのようなphp\php.exeと書かずともphpと書くだけで利用できるようになります。(その場合バッチファイルの書き換えをお願いします...)  
+やらない場合は、本ツールを置いてあるディレクトリに配置してください。  
 
 PHP.iniの編集が必要です。以下を参考に設定させていただきました。  
 https://www.javadrive.jp/php/install/index8.html  
 以下のように設定してください。(1629行目以降の設定に自信はないです...  
+extension_dir = "ext" //761行目付近 ここを設定しないと他でPHPを使う際にトラブルのもととなります(なりました...)。  
 extension=mbstring //924行目付近  
 mbstring.language = Japanese /1622行目付近  
 mbstring.internal_encoding = SJIS //1629行目付近  
