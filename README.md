@@ -1,3 +1,4 @@
+# 使用は非推奨です。Node.js版を利用してみてください
 # EDCB_to_Amatsukaze_Wait
 EDCBの録画終了後バッチからAmatsukazeServerへ渡すためのものです。  
 録画鯖とエンコード鯖が分かれていて、エンコード鯖を常時起動させたくない場合に使います。  
